@@ -1,6 +1,7 @@
 package eu.wewox.minabox
 
 import eu.wewox.minabox.MinaBoxItem.Value.Absolute
+import kotlin.jvm.JvmInline
 
 /**
  * The layout data for item inside [MinaBox].

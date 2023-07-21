@@ -8,6 +8,12 @@ plugins {
 kotlin {
 	android()
 	jvm()
+	js(IR) {
+		browser()
+	}
+	wasm {
+		browser()
+	}
 
 	sourceSets {
 		val commonMain by getting {
@@ -20,6 +26,16 @@ kotlin {
 		val jvmMain by getting
 
 		val androidMain by getting
+
+		val jsWasmMain by creating {
+			dependsOn(commonMain)
+		}
+		val jsMain by getting {
+			dependsOn(jsWasmMain)
+		}
+		val wasmMain by getting {
+			dependsOn(jsWasmMain)
+		}
 	}
 }
 
