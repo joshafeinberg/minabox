@@ -9,16 +9,19 @@ plugins {
 }
 
 kotlin {
-    @OptIn(ExperimentalKotlinGradlePluginApi::class)
-    targetHierarchy.default()
-
     androidTarget()
 
     jvm()
 
-    iosX64()
+    js(IR) {
+        browser()
+    }
+
+    applyDefaultHierarchyTemplate()
+
+    /*iosX64()
     iosArm64()
-    iosSimulatorArm64()
+    iosSimulatorArm64()*/
 
     sourceSets {
         val commonMain by getting {
