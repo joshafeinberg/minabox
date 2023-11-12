@@ -13,9 +13,15 @@ kotlin {
 
     jvm()
 
-    iosX64()
+    js(IR) {
+        browser()
+    }
+
+    applyDefaultHierarchyTemplate()
+
+    /*iosX64()
     iosArm64()
-    iosSimulatorArm64()
+    iosSimulatorArm64()*/
 
     @OptIn(ExperimentalWasmDsl::class)
     wasmJs {
