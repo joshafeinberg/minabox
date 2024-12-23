@@ -4,14 +4,15 @@ sdk-min = "21"
 sdk-target = "34"
 
 # Must be updated along with plugin-compose-jetbrains
-compose-bom = "2023.10.01"
+compose-bom = "2024.12.01"
 compose-compiler = "1.5.4"
 accompanist = "0.32.0"
 activity-compose = "1.8.0"
+core-splashscreen = "1.0.1"
 
-plugin-compose-jetbrains = "1.5.10"
-plugin-android-gradle = "8.1.2"
-plugin-kotlin = "1.9.20"
+plugin-compose-jetbrains = "1.7.0"
+plugin-android-gradle = "8.7.3"
+plugin-kotlin = "2.1.0"
 plugin-detekt = "1.21.0"
 plugin-spotless = "6.5.1"
 plugin-mavenpublish = "0.25.3"
@@ -31,7 +32,8 @@ androidx-splashscreen = { module = "androidx.core:core-splashscreen", version.re
 android-application = { id = "com.android.application", version.ref = "plugin-android-gradle" }
 android-library = { id = "com.android.library", version.ref = "plugin-android-gradle" }
 jetbrains-cocoapods = { id = "org.jetbrains.kotlin.native.cocoapods", version.ref = "plugin-kotlin" }
-jetbrains-compose = { id = "org.jetbrains.compose", version.ref = "compose-multiplatform" }
+jetbrains-compose = { id = "org.jetbrains.compose", version.ref = "plugin-compose-jetbrains" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "plugin-kotlin" }
 kotlin = { id = "org.jetbrains.kotlin.android", version.ref = "plugin-kotlin" }
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "plugin-kotlin" }
 kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "plugin-kotlin" }
