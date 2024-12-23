@@ -31,6 +31,6 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: publish
-        run: ./gradlew publish --no-daemon --no-parallel
+        run: ./gradlew publishAllPublicationsToGitHubPackagesRepository --no-daemon --no-parallel
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
