@@ -10,7 +10,7 @@ plugins {
 kotlin {
     @OptIn(ExperimentalWasmDsl::class)
     wasmJs {
-        moduleName = "minabox-demo"
+        moduleName = "minaboxdemo"
         browser {
             commonWebpackConfig {
                 outputFileName = "main.js"
