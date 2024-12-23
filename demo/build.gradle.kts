@@ -2,7 +2,7 @@ import org.jetbrains.kotlin.gradle.targets.js.dsl.ExperimentalWasmDsl
 
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
-    // alias(libs.plugins.jetbrains.cocoapods)
+    alias(libs.plugins.jetbrains.cocoapods)
     alias(libs.plugins.jetbrains.compose)
     alias(libs.plugins.compose.compiler)
     alias(libs.plugins.android.library)
@@ -24,13 +24,13 @@ kotlin {
         binaries.library()
     }
 
-    /*iosX64()
+    iosX64()
     iosArm64()
-    iosSimulatorArm64()*/
+    iosSimulatorArm64()
 
     applyDefaultHierarchyTemplate()
 
-    /*cocoapods {
+    cocoapods {
         version = "1.0.0"
         summary = "Demo Compose Multiplatform module"
         homepage = "---"
@@ -40,7 +40,7 @@ kotlin {
             baseName = "demo"
             isStatic = true
         }
-    }*/
+    }
 
     sourceSets {
         val commonMain by getting {

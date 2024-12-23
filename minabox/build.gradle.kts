@@ -18,9 +18,9 @@ kotlin {
 
     applyDefaultHierarchyTemplate()
 
-    /*iosX64()
+    iosX64()
     iosArm64()
-    iosSimulatorArm64()*/
+    iosSimulatorArm64()
 
     @OptIn(org.jetbrains.kotlin.gradle.ExperimentalWasmDsl::class)
     wasmJs {
@@ -64,5 +64,18 @@ android {
     }
     composeOptions {
         kotlinCompilerExtensionVersion = libs.versions.compose.compiler.get()
+    }
+}
+
+publishing {
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            setUrl("https://maven.pkg.github.com/joshafeinberg/minabox")
+            credentials {
+                username = System.getenv("GITHUB_ACTOR")
+                password = System.getenv("GITHUB_TOKEN")
+            }
+        }
     }
 }
